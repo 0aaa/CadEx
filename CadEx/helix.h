@@ -13,13 +13,13 @@ public:
 		step = _step;
 	}
 
-	void getPointAt(const float)override;
-	void getDerivativeAt(const float)override;
+	void getPointAt(const float) const override;
+	void getDerivativeAt(const float) const override;
 
-	void print()override;
+	void print() override;
 
 	void setStep(const float);
-	const float getStep()const;
+	const float getStep() const;
 
 	~Helix() = default;
 };

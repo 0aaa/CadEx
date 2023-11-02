@@ -7,10 +7,10 @@ public:
 	Circle() = default;
 	Circle(const float _rad, const string& _name = "circle") :Ellipse(_rad, _rad, _name) {}
 
-	void print()override;
+	void getPointAt(const float) const override;
+	void getDerivativeAt(const float) const override;
 
-	void getPointAt(const float)override;
-	void getDerivativeAt(const float)override;
+	void print() override;
 
 	~Circle() = default;
 };

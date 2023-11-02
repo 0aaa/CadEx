@@ -1,41 +1,51 @@
 #pragma once
 #include<string>
+#include<iostream>
 #include<cstdlib>
 #include<ctime>
-#include"point.h"
 
+using std::cout;
 using std::string;
 
 class Curve
 {
 private:
-	const float PI = 3.14f;// rounding
-	float rad_X, rad_Y;
+	float rad_x, rad_y;
 	string name;
+
+protected:
+	const float PI = 3.14f;// rounding
 
 public:
 	Curve() = default;
-	Curve(const float _rad_X, const float _rad_Y, const string& _name) :rad_X(_rad_X), rad_Y(_rad_Y), name(_name)
+	Curve(const float _rad_x, const float _rad_y, const string& _name) :rad_x(_rad_x), rad_y(_rad_y), name(_name)
 	{
-		if (_rad_X <= 0 || _rad_Y <= 0)
+		try
 		{
-			throw std::invalid_argument("Invalid value.");
+			if (_rad_x <= 0 || _rad_y <= 0)
+			{
+				throw std::invalid_argument("Invalid value.");
+			}
+			rad_x = _rad_x;
+			rad_y = _rad_y;
 		}
-		rad_X = _rad_X;
-		rad_Y = _rad_Y;
+		catch (const std::invalid_argument& e)
+		{
+			cout << e.what();
+		}
 	}
 
-	void setRad_X(const float);
-	const float getRad_X()const;
+	void setRadX(const float);
+	const float getRadX() const;
 
-	void setRad_Y(const float);
-	const float getRad_Y()const;
+	void setRadY(const float);
+	const float getRadY() const;
 
 	void setName(const string);
-	const string getName()const;
+	const string getName() const;
 
-	virtual void getPointAt(const float) {};
-	virtual void getDerivativeAt(const float) {};
+	virtual void getPointAt(const float) const {};
+	virtual void getDerivativeAt(const float) const {};
 
 	virtual void print() {};
 

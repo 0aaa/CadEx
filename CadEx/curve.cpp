@@ -1,39 +1,50 @@
 #include"curve.h"
-#include<iostream>
 
-using std::cout;
-
-void Curve::setRad_X(const float _rad_X)
+void Curve::setRadX(const float _rad_x)
 {
-	if (_rad_X <= 0)
+	try
 	{
-		throw std::invalid_argument("Invalid value.");
+		if (_rad_x <= 0)
+		{
+			throw std::invalid_argument("Invalid value.");
+		}
+		rad_x = _rad_x;
 	}
-	rad_X = _rad_X;
+	catch (const std::invalid_argument& e)
+	{
+		cout << e.what();
+	}
 }
-const float Curve::getRad_X()const
+const float Curve::getRadX() const
 {
-	return rad_X;
+	return rad_x;
 }
 
-void Curve::setRad_Y(const float _rad_Y)
+void Curve::setRadY(const float _rad_y)
 {
-	if (_rad_Y <= 0)
+	try
 	{
-		throw std::invalid_argument("Invalid value.");
+		if (_rad_y <= 0)
+		{
+			throw std::invalid_argument("Invalid value.");
+		}
+		rad_y = _rad_y;
 	}
-	rad_Y = _rad_Y;
+	catch (const std::invalid_argument& e)
+	{
+		cout << e.what();
+	}
 }
-const float Curve::getRad_Y()const
+const float Curve::getRadY() const
 {
-	return rad_Y;
+	return rad_y;
 }
 
 void Curve::setName(const string _name)
 {
 	name = _name;
 }
-const string Curve::getName()const
+const string Curve::getName() const
 {
 	return name;
 }

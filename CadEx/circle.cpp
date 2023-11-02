@@ -1,16 +1,16 @@
 #include"circle.h"
 
+void Circle::getPointAt(const float t) const
+{
+	cout << "\nat " << t << "\tx:\t" << cos(t) * getRadX() << "\ty:\t" << sin(t) * getRadX();
+}
+
+void Circle::getDerivativeAt(const float t) const
+{
+	cout << "\nat " << t << "\tf':\t" << tan(t - PI / 2);// t e [0; PI / 2]
+}
+
 void Circle::print()
 {
-	cout << "\n\n" << getName() << "\t\tradius:\t" << getRad_X();
-}
-
-void Circle::getPointAt(const float t)
-{
-	cout << "\nat " << t << "\tx:\t" << cos(t) * getRad_X() << "\ty:\t" << sin(t) * getRad_X();
-}
-
-void Circle::getDerivativeAt(const float t)
-{
-	cout << "\nat " << t << "\tderivative:\t" << tan(t - 3.14 / 2);// t e [0; PI / 2]
+	cout << "\n\n" << getName() << "\t\tr:\t" << getRadX();
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CadEx", "CadEx\CadEx.vcxproj", "{9B6E6E72-B6F2-435D-BF58-48D8699C830C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CurveLib", "CurveLib\CurveLib.vcxproj", "{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{9B6E6E72-B6F2-435D-BF58-48D8699C830C}.Release|x64.Build.0 = Release|x64
 		{9B6E6E72-B6F2-435D-BF58-48D8699C830C}.Release|x86.ActiveCfg = Release|Win32
 		{9B6E6E72-B6F2-435D-BF58-48D8699C830C}.Release|x86.Build.0 = Release|Win32
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Debug|x64.ActiveCfg = Debug|x64
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Debug|x64.Build.0 = Debug|x64
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Debug|x86.ActiveCfg = Debug|Win32
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Debug|x86.Build.0 = Debug|Win32
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Release|x64.ActiveCfg = Release|x64
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Release|x64.Build.0 = Release|x64
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Release|x86.ActiveCfg = Release|Win32
+		{02AD4701-64BA-4BDF-9E64-C3F7D879EF29}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

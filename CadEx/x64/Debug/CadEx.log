@@ -1,5 +1,17 @@
-﻿  circle.cpp
-  ellipse.cpp
-  helix.cpp
-  Generating Code...
+﻿  CadEx.cpp
+C:\Users\pc\source\repos\jb\CadEx\CurveLib\curve_l.h(20,9): warning C4251: 'CurveL::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'CurveL'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5119,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(48,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(63,58): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(63,38): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(66,37): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(69,52): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(69,34): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(129,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(144,59): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(144,39): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(147,38): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(150,53): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\pc\source\repos\jb\CadEx\CadEx\CadEx.cpp(150,35): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
   CadEx.vcxproj -> C:\Users\pc\source\repos\jb\CadEx\x64\Debug\CadEx.exe
+  0 File(s) copied
