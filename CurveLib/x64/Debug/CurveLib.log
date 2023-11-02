@@ -1,9 +1,6 @@
 ﻿  circle_l.cpp
 C:\Users\pc\source\repos\jb\CadEx\CurveLib\curve_l.h(20,9): warning C4251: 'CurveL::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'CurveL'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5119,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-  curve_l.cpp
-C:\Users\pc\source\repos\jb\CadEx\CurveLib\curve_l.h(20,9): warning C4251: 'CurveL::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'CurveL'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5119,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
   ellipse_l.cpp
 C:\Users\pc\source\repos\jb\CadEx\CurveLib\curve_l.h(20,9): warning C4251: 'CurveL::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'CurveL'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5119,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
@@ -11,5 +8,4 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.3282
 C:\Users\pc\source\repos\jb\CadEx\CurveLib\curve_l.h(20,9): warning C4251: 'CurveL::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'CurveL'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xstring(5119,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
   Generating Code...
-     Creating library C:\Users\pc\source\repos\jb\CadEx\x64\Debug\CurveLib.lib and object C:\Users\pc\source\repos\jb\CadEx\x64\Debug\CurveLib.exp
   CurveLib.vcxproj -> C:\Users\pc\source\repos\jb\CadEx\x64\Debug\CurveLib.dll

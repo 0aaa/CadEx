@@ -3,6 +3,9 @@
 #include<cstdlib>
 #include<ctime>
 #include<algorithm>
+
+#include<omp.h>
+
 #include "helix.h"
 
 #include"helix_l.h"
@@ -17,35 +20,38 @@
 Спасибо, что уделили мне внимание)
 */
 
+
+constexpr int THREAD_NUM = 3;
+constexpr float PI = 3.14f;// rounding
+constexpr int MIN = 7;
+constexpr int MAX = 8;
+
 void byClasses();
 void byDll();
 
 int main()
 {
 	cout << std::setprecision(3);
-	
+
 	byClasses();
 
 	/*
-	7. Split implementation into a library of curves (.dll or .so) and executable which uses API of this 
+	7. Split implementation into a library of curves (.dll or .so) and executable which uses API of this
 	library
 	*/
+
 	byDll();
 }
 
 void byClasses()
 {
-	const float PI = 3.14f;// rounding
-	const int MIN = 5;
-	const int MAX = 5;
-
 	std::vector<Curve*> curves;
 	std::vector<Circle*> circles;
 
-	int curves_qty = rand() % MAX + MIN;
+	srand(time(0));
+	int curves_num = rand() % MAX + MIN;
 	float radii_sum = 0;
 
-	srand(time(0));
 	Curve* to_add;
 	/*
 		1. Support a few types of 3D geometric curves – circles, ellipses and 3D helixes. (Simplified
@@ -55,7 +61,7 @@ void byClasses()
 		random parameters.
 	*/
 	cout << "The container (Vector) of objects of the curves created in random manner with random parameters:";
-	for (int i = 0; i < curves_qty; i++)
+	for (int i = 0; i < curves_num; i++)
 	{
 		switch (rand() % 3)
 		{
@@ -96,18 +102,28 @@ void byClasses()
 
 	/*
 		6. Compute the total sum of radii of all curves in the second container.
+		8. Implement computation of the total sum of radii using parallel computations (e.g. OpenMP or Intel 
+		TBB library)
 	*/
 	cout << "\n\nThe second container that contains only circles from the first container\nSorted:";
-	for (int i = 0; i < circles.size(); i++)
+
+	omp_set_num_threads(THREAD_NUM);
+	cout << "\nThreads number:\t" << omp_get_max_threads();
+	
+	int i = 0;
+	#pragma omp parallel for schedule (static) shared (circles) private (i) reduction (+: radii_sum)
 	{
-		radii_sum += circles[i]->getRadX();
-		circles[i]->print();
+		for (; i < circles.size(); i++)
+		{
+			radii_sum += circles[i]->getRadX();
+			circles[i]->print();
+		}
 	}
 
-	cout << "\n\nThe total sum of radii of all curves in the second container:\t" << radii_sum << "\n";
+	cout << "\n\nThe total sum of radii of all curves in the second container:\t" << radii_sum << '\n';
 
 
-	for (int i = 0; i < curves.size(); i++)
+	for (i = 0; i < curves.size(); i++)
 	{
 		delete curves[i];
 	}
@@ -116,17 +132,13 @@ void byClasses()
 
 void byDll()
 {
-	const float PI = 3.14f;// rounding
-	const int MIN = 5;
-	const int MAX = 5;
-
 	std::vector<CurveL*> curves;
 	std::vector<CircleL*> circles;
 
+	srand(time(0));
 	int curves_qty = rand() % MAX + MIN;
 	float radii_sum = 0;
 
-	srand(time(0));
 	CurveL* to_add;
 	/*
 		1. Support a few types of 3D geometric curves – circles, ellipses and 3D helixes. (Simplified
@@ -185,7 +197,7 @@ void byDll()
 		circles[i]->print();
 	}
 
-	cout << "\n\nThe total sum of radii of all curves in the second container:\t" << radii_sum << "\n";
+	cout << "\n\nThe total sum of radii of all curves in the second container:\t" << radii_sum << '\n';
 
 
 	for (int i = 0; i < curves.size(); i++)
